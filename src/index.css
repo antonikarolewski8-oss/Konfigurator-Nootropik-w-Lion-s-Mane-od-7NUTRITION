@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-red: #E3000F;
+  --color-brand-dark: #111111;
+  --color-brand-light: #F9FAFB;
+  --color-brand-gray: #4B5563;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-brand-light text-brand-dark font-sans antialiased;
+  }
+}
+
+/* Custom scrollbar for inner content if needed */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #CBD5E1;
+  border-radius: 20px;
+}
+
+/* Ensure the slide container is strictly square and hides overflow */
+.slide-container {
+  width: 100%;
+  max-width: 600px;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+  background: white;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+}
